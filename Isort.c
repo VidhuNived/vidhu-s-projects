@@ -14,21 +14,22 @@ int i,j,k;
       a[j+1]=k;
     }
 }
-int read()
+int read(int *a)
 {
-int i,size,a[20];
+int i,size;
 printf("Enter the size of array");
 scanf("%d",&size);
 printf("Enter tha array");
 for(i=0;i<size;i++)
 scanf("%d",&a[i]);
+printf("\n");
 return size;
 }
 
 main()
 {
   int a[20],size,h;
-size=read();
+size=read(a);
 sort(a,size);
       for(h=0;h<size;h++)
 	printf("%d\t",a[h]);
